@@ -3,6 +3,8 @@
 @section('title', 'Lista dei fumetti')
 
 @section('content')
+<div class="container">
+<a href="{{route('comics.create')}}" class="btn btn-secondary m-1">Aggiungi fumetto</a>
 <table class="table table-dark table-striped">
     <thead>
       <tr>
@@ -29,4 +31,5 @@
         @endforeach
     </tbody>
   </table>
+</div>
 @endsection
