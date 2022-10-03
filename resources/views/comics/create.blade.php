@@ -1,5 +1,7 @@
 @extends('layout.app')
 
+@section('title', 'Aggiungi fumetto')
+
 @section('content')
 <div class="container">
 
