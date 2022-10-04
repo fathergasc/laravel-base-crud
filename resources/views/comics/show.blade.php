@@ -11,6 +11,7 @@
     <h5>Series: {{$comic->series}}</h5>
     <h5 class="text-capitalize">{{$comic->type}}</h5>
     <h5>{{$comic->sale_date}}</h5>
+    <a class="btn btn-primary" href="{{route('comics.index')}}">Back to list</a>
 </div>
 
 @endsection

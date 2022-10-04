@@ -90,7 +90,7 @@ class ComicController extends Controller
         $comic->update($data);
         $comic->save();
 
-        return redirect()->route('comics.edit', ['comic' => $comic]);
+        return redirect()->route('comics.edit', ['comic' => $comic])->with('status', 'Comic updated!');
     }
 
     /**
@@ -99,8 +99,9 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+        return redirect()->route('comics.index');
     }
 }

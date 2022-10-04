@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Modifica fumetto')
+@section('title', 'Edit comic data')
 
 @section('content')
 

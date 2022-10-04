@@ -12,7 +12,13 @@
 <body>
 
     @include('partials.header')
-
+    <div class="container">
+        @if (session('status'))
+    <div class="alert alert-success mt-2">
+        {{ session('status') }}
+    </div>
+        @endif
+    </div>
     <main class="p-3">
         @yield('content')
     </main>

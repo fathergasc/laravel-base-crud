@@ -1,10 +1,10 @@
 @extends('layout.app')
 
-@section('title', 'Lista dei fumetti')
+@section('title', 'Comics list')
 
 @section('content')
 <div class="p-3">
-    <a href="{{route('comics.create')}}" class="btn btn-secondary m-1">Aggiungi fumetto</a>
+    <a href="{{route('comics.create')}}" class="btn btn-secondary m-1">Add comic</a>
     <table class="table table-dark table-striped">
         <thead>
         <tr>
@@ -31,6 +31,13 @@
                 <td>
                     <a class="btn btn-secondary m-1" href="{{route('comics.show', ['comic' =>$comic->id])}}">Show</a>
                     <a class="btn btn-info m-1" href="{{route('comics.edit', ['comic' =>$comic->id])}}">Edit</a>
+                    <form action="{{route('comics.destroy', ['comic' => $comic->id])}}" method="POST">
+
+                        @csrf
+                        @method('DELETE')
+                        <input class="btn btn-danger" type="submit" value="Delete">
+
+                    </form>
                 </td>
             </tr>
             @endforeach
