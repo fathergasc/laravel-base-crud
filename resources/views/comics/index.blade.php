@@ -31,7 +31,7 @@
                 <td>
                     <a class="btn btn-secondary m-1" href="{{route('comics.show', ['comic' =>$comic->id])}}">Show</a>
                     <a class="btn btn-info m-1" href="{{route('comics.edit', ['comic' =>$comic->id])}}">Edit</a>
-                    <form action="{{route('comics.destroy', ['comic' => $comic->id])}}" method="POST">
+                    <form action="{{route('comics.destroy', ['comic' => $comic->id])}}" method="POST" onsubmit="return confirm('Are you sure you want to delete this entry?')">
 
                         @csrf
                         @method('DELETE')
