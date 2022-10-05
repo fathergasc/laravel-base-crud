@@ -43,7 +43,7 @@ class ComicController extends Controller
             [
                 'title' => 'required|max:100|min:4',
                 'description' => 'nullable',
-                'thumb' => 'required|URL|max:255',
+                'thumb' => 'required|url|max:255',
                 'price' => 'required|max:9999.99',
                 'series' => 'required|max:100|min:4',
                 'sale_date' => 'required|date',
@@ -102,7 +102,7 @@ class ComicController extends Controller
             [
                 'title' => 'required|max:100|min:4',
                 'description' => 'nullable',
-                'thumb' => 'required|URL|max:255',
+                'thumb' => 'required|url|max:255',
                 'price' => 'required|max:9999.99',
                 'series' => 'required|max:100|min:4',
                 'sale_date' => 'required|date',
