@@ -107,6 +107,11 @@ class ComicController extends Controller
                 'series' => 'required|max:100|min:4',
                 'sale_date' => 'required|date',
                 'type' => 'required|', Rule::in('comic book', 'graphic novel')
+            ],
+
+            //HOW TO ADD CUSTOM ERROR MESSAGE FOR EACH VALIDATION
+            [
+                'title.max' => 'Be careful!!! The title cannot be longer than 100 characters!'
             ]
         );
 
